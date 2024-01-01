@@ -6,6 +6,7 @@ import { PageWelcome } from "./pages/PageWelcome.tsx";
 import { PageInfo } from "./pages/PageInfo.tsx";
 import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
+import { PageTest } from "./pages/PageTest.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
 			{
 				path: "about",
 				element: <PageAbout />,
+			},
+			{
+				path: "test",
+				element: <PageTest />,
 			},
 			{
 				path: "/",
