@@ -14,3 +14,7 @@ export const createFile = (pathAndFileName: string, content: string) => {
 export const getArgument = (index = 0) => {
 	return process.argv[index + 2];
 }
+
+export const capitalizeFirstCharacter = (text: string) => {
+	return text[0].toUpperCase() + text.slice(1);
+}
