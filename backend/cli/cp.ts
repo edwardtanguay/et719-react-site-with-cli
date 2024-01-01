@@ -1,7 +1,8 @@
-import { getArgument } from "./tools";
+import * as tools from "./tools";
 
-const pageIdCode = getArgument();
+const pageIdCode = tools.getArgument();
 
 const pageFileName = `Page${pageIdCode}.tsx`;
 
-console.log(`Creating ${pageFileName}...`);
+tools.createFile(`src/pages/${pageFileName}`, 'test');
+
