@@ -1,4 +1,6 @@
-const pageIdCode = process.argv[2];
+import { getArgument } from "./tools";
+
+const pageIdCode = getArgument();
 
 const pageFileName = `Page${pageIdCode}.tsx`;
 
