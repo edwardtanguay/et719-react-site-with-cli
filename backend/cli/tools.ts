@@ -27,3 +27,7 @@ export const convertStringBlockToLines = (stringBlock: string) => {
 	const lines = stringBlock.split('\n');
 	return lines;
 }
+
+export const writeFile = (pathAndFileName: string, content: string) => {
+	fs.writeFileSync(pathAndFileName, content.trim());
+};

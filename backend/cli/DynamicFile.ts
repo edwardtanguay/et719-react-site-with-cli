@@ -15,6 +15,10 @@ export class DynamicFile {
 		this.lines = tools.convertStringBlockToLines(this.content);
 	}
 
+	public save() {
+		tools.writeFile(this.pathAndFileName, this.getContentFromLines());
+	}
+
 	public addStringBlockBeforeMarker(marker: string, stringBlock: string) {
 		const stringBlockLines = tools.convertStringBlockToLines(stringBlock);
 		const newLines: string[] = [];
