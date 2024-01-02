@@ -26,10 +26,6 @@ const router = createBrowserRouter([
 				path: "about",
 				element: <PageAbout />,
 			},
-			{
-				path: "test",
-				element: <PageTest />,
-			},
 			{ // MARKER::NEW_PAGE
 				path: "/",
 				element: <Navigate to="/welcome" replace />,
