@@ -34,12 +34,11 @@ export const Page${this.pascalNotationIdCode} = () => {
 
 	private updateMainFile() {
 		const dynamicFile = new DynamicFile('src/main.tsx');
-		const marker = 'MARKER::NEW_PAGE';
-		const stringBlockToAdd = `			{
+		dynamicFile.addStringBlockBeforeMarker('MARKER::IMPORT_NEW_PAGE', `import { Page${this.pascalNotationIdCode} } from "./pages/Page${this.pascalNotationIdCode}.tsx";`);
+		dynamicFile.addStringBlockBeforeMarker('MARKER::NEW_PAGE', `			{
 				path: "${this.camelCaseNotationIdCode}",
 				element: <Page${this.pascalNotationIdCode} />,
-			},`;
-		dynamicFile.addStringBlockBeforeMarker(marker, stringBlockToAdd);
+			},`);
 		dynamicFile.save();
 	}
 
