@@ -31,6 +31,17 @@ export const Page${this.pascalNotationIdCode} = () => {
 `);
 	}
 
+	private updateMainFile() {
+		const dynamicFile = new DynamicFile('src/main.tsx');
+		const marker = 'MARKER::NEW_PAGE';
+		const stringBlockToAdd = `			{
+				path: "${this.camelCaseNotationIdCode}",
+				element: <Page${this.pascalNotationIdCode} />,
+			},`;
+		dynamicFile.addStringBlockBeforeMarker(marker, stringBlockToAdd);
+		dynamicFile.save();
+	}
+
 	private updateNavFile() {
 		const dynamicFile = new DynamicFile('src/components/Nav.tsx');
 		const marker = '</ul>';
