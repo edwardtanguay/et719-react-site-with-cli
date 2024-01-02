@@ -19,6 +19,7 @@ export class PageManager {
 	public createPage() {
 		this.createPageFile();
 		this.updateNavFile();
+		this.updateMainFile();
 	}
 
 	private createPageFile() {
